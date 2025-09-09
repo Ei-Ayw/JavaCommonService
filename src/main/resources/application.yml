@@ -8,3 +8,22 @@ spring:
     url: jdbc:mysql://localhost:3306/commomservice
     username: root
     password: 123456
+
+storage:
+  type: aliyun  # 可选值: aliyun, tencent, minio
+  aliyun:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+    access-key-id: your-access-key-id
+    access-key-secret: your-access-key-secret
+    bucket-name: your-bucket-name
+    region: oss-cn-hangzhou
+  tencent:
+    secret-id: your-secret-id
+    secret-key: your-secret-key
+    bucket-name: your-bucket-name
+    region: ap-guangzhou
+  minio:
+    endpoint: http://localhost:9000
+    access-key: minioadmin
+    secret-key: minioadmin
+    bucket-name: your-bucket-name
